@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  selector:
+    matchLabels:
+      app: devops-sample-app
+      tier: backend
+      track: stable
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: devops-sample-app
+        tier: backend
+        track: stable
+    spec:
+      containers:
+        - name: nodejs
+          image: "rajithr007/devops-sample-app-be:latest"
+          ports:
+            - name: http
+              containerPort: 3003
