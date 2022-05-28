@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: angular
-          image: "rajithr007/devops-sample-app-ui:latest"
+          image: "rajithr007/devops-sample-app-ui:98"
           lifecycle:
             preStop:
               exec:
